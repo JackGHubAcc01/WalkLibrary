@@ -1,22 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#173f35"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="WalkLibrary">
-<title>WalkLibrary V0.2</title><link rel="manifest" href="manifest.webmanifest"><link rel="icon" href="icon.svg"><link rel="apple-touch-icon" href="icon-192.png">
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIINfQ3yn5B+qHWzQC2nMZ7ecL4k0FQmWvU=" crossorigin=""><link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header><div><div class="eyebrow">YOUR OUTDOOR LIBRARY</div><h1>WalkLibrary</h1></div><div class="status"><span id="netDot"></span><span id="netText">Checking…</span></div></header>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#123f32"><meta name="apple-mobile-web-app-capable" content="yes"><title>TrailAtlas</title><link rel="manifest" href="./manifest.webmanifest"><link rel="stylesheet" href="./styles.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"></head><body>
+<header><div><small>WORLD THRU-HIKE DISCOVERY</small><b>TrailAtlas</b></div><span id="net">● Online</span></header>
 <main>
-<section id="library" class="view active"><div class="toolbar"><input id="search" type="search" placeholder="Search saved walks…"><button id="addBtn" class="primary">＋ Add walk</button></div><div class="chips"><button class="chip selected" data-filter="all">All</button><button class="chip" data-filter="wild">⛺ Wild camp</button><button class="chip" data-filter="mountain">⛰ Mountain</button><button class="chip" data-filter="coastal">🌊 Coastal</button><button class="chip" data-filter="completed">✓ Completed</button></div><div id="walkList" class="cards"></div></section>
-<section id="mapView" class="view"><div class="mapHead"><div><strong>Saved routes map</strong><small id="mapMessage">Online map of your library</small></div><button id="fitBtn">Fit routes</button></div><div id="map"></div><div id="offlineMap" class="offline-map hidden"><strong>Map background unavailable offline</strong><p>Your saved walks and GPX data are still stored on this phone. Reconnect to load the map background.</p></div></section>
-<section id="trips" class="view"><h2>Planned trips</h2><div id="tripList" class="cards"></div></section>
+<section id="explore" class="screen active"><div id="map"></div><div class="search"><input id="q" placeholder="Search trails, countries or regions…"><button id="filter">☰</button></div><div id="card" class="card hide"></div></section>
+<section id="saved" class="screen page"><h2>Saved trails</h2><p>Your shortlist for future adventures.</p><div id="savedList"></div></section>
+<section id="trips" class="screen page"><h2>Future trips</h2><p>Build an itinerary and keep accommodation and travel bookings together.</p><div id="tripList"></div></section>
+<section id="done" class="screen page"><h2>Completed</h2><div class="empty">No completed thru-hikes yet.</div></section>
 </main>
-<nav><button class="nav active" data-view="library">⌂<span>Library</span></button><button class="nav" data-view="mapView">⌖<span>Map</span></button><button class="nav" data-view="trips">◫<span>Trips</span></button></nav>
-
-<dialog id="walkDialog"><form id="walkForm" method="dialog"><div class="dialogHead"><div><div class="eyebrow" id="formMode">NEW SAVED WALK</div><h2 id="formTitle">Add walk</h2></div><button type="button" id="closeDialog" class="iconBtn">×</button></div><input type="hidden" id="walkId"><label>Name<input id="name" required placeholder="e.g. Castle Tioram"></label><div class="two"><label>Area<input id="area" placeholder="e.g. Loch Moidart, Scotland"></label><label>Status<select id="status"><option value="saved">Saved idea</option><option value="planned">Planned trip</option><option value="completed">Completed</option></select></label></div><div class="three"><label>Distance (km)<input id="distance" type="number" min="0" step="0.1"></label><label>Ascent (m)<input id="ascent" type="number" min="0" step="1"></label><label>Duration<input id="duration" placeholder="e.g. 4–5 hr"></label></div><div class="two"><label>Latitude<input id="lat" type="number" step="any" placeholder="56.78"></label><label>Longitude<input id="lng" type="number" step="any" placeholder="-5.82"></label></div><label>Tags<input id="tags" placeholder="wild, coastal, circular"></label><label>Notes<textarea id="notes" rows="4" placeholder="Parking, camp ideas, route notes…"></textarea></label><label class="fileLabel">GPX route<input id="gpx" type="file" accept=".gpx,application/gpx+xml"><span id="gpxState">No GPX selected</span></label><div class="formActions"><button type="button" id="deleteBtn" class="danger hidden">Delete</button><span></span><button type="button" id="cancelBtn">Cancel</button><button type="submit" class="primary">Save walk</button></div></form></dialog>
-
-<dialog id="detailDialog"><div class="dialogHead"><div><div class="eyebrow" id="detailStatus"></div><h2 id="detailName"></h2></div><button type="button" id="closeDetail" class="iconBtn">×</button></div><div id="detailBody"></div><div class="detailActions"><button id="detailMap">View on map</button><button id="editBtn" class="primary">Edit</button></div></dialog>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script src="app.js"></script>
-</body></html>
+<nav><button data-go="explore" class="active">🌍<span>Explore</span></button><button data-go="saved">🔖<span>Saved</span></button><button data-go="trips">🎒<span>Trips</span></button><button data-go="done">✓<span>Completed</span></button></nav>
+<div id="modal" class="modal hide"><div class="sheet"><button id="x">×</button><div id="modalBody"></div></div></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script><script src="./app.js"></script></body></html>

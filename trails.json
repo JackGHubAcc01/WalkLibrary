@@ -1,0 +1,222 @@
+[
+  {
+    "id": "tmb",
+    "name": "Tour du Mont Blanc",
+    "region": "Alps",
+    "countries": "France \u2022 Italy \u2022 Switzerland",
+    "km": 170,
+    "days": "7\u201311",
+    "lat": 45.92,
+    "lon": 6.87,
+    "season": "Jun\u2013Sep"
+  },
+  {
+    "id": "pct",
+    "name": "Pacific Crest Trail",
+    "region": "Western USA",
+    "countries": "United States",
+    "km": 4265,
+    "days": "120\u2013180",
+    "lat": 40.0,
+    "lon": -121.0,
+    "season": "Apr\u2013Sep"
+  },
+  {
+    "id": "at",
+    "name": "Appalachian Trail",
+    "region": "Eastern USA",
+    "countries": "United States",
+    "km": 3500,
+    "days": "150\u2013210",
+    "lat": 38.5,
+    "lon": -78.5,
+    "season": "Mar\u2013Oct"
+  },
+  {
+    "id": "cdt",
+    "name": "Continental Divide Trail",
+    "region": "Rocky Mountains",
+    "countries": "United States",
+    "km": 5000,
+    "days": "150\u2013180",
+    "lat": 42.0,
+    "lon": -109.0,
+    "season": "Apr\u2013Sep"
+  },
+  {
+    "id": "whw",
+    "name": "West Highland Way",
+    "region": "Scotland",
+    "countries": "United Kingdom",
+    "km": 154,
+    "days": "5\u20138",
+    "lat": 56.55,
+    "lon": -4.7,
+    "season": "Apr\u2013Oct"
+  },
+  {
+    "id": "gr20",
+    "name": "GR20",
+    "region": "Corsica",
+    "countries": "France",
+    "km": 180,
+    "days": "10\u201316",
+    "lat": 42.2,
+    "lon": 9.05,
+    "season": "Jun\u2013Sep"
+  },
+  {
+    "id": "camino",
+    "name": "Camino Franc\u00e9s",
+    "region": "Northern Spain",
+    "countries": "Spain",
+    "km": 780,
+    "days": "30\u201340",
+    "lat": 42.55,
+    "lon": -4.5,
+    "season": "Apr\u2013Oct"
+  },
+  {
+    "id": "kungsleden",
+    "name": "Kungsleden",
+    "region": "Swedish Lapland",
+    "countries": "Sweden",
+    "km": 440,
+    "days": "20\u201330",
+    "lat": 67.5,
+    "lon": 18.3,
+    "season": "Jun\u2013Sep"
+  },
+  {
+    "id": "te-araroa",
+    "name": "Te Araroa",
+    "region": "New Zealand",
+    "countries": "New Zealand",
+    "km": 3000,
+    "days": "90\u2013150",
+    "lat": -41.3,
+    "lon": 173.0,
+    "season": "Oct\u2013Apr"
+  },
+  {
+    "id": "bibbulmun",
+    "name": "Bibbulmun Track",
+    "region": "Western Australia",
+    "countries": "Australia",
+    "km": 1000,
+    "days": "40\u201360",
+    "lat": -33.2,
+    "lon": 116.2,
+    "season": "Mar\u2013May / Sep\u2013Nov"
+  },
+  {
+    "id": "jordan",
+    "name": "Jordan Trail",
+    "region": "Jordan",
+    "countries": "Jordan",
+    "km": 675,
+    "days": "35\u201345",
+    "lat": 30.4,
+    "lon": 35.5,
+    "season": "Feb\u2013Apr / Oct\u2013Nov"
+  },
+  {
+    "id": "annapurna",
+    "name": "Annapurna Circuit",
+    "region": "Himalaya",
+    "countries": "Nepal",
+    "km": 160,
+    "days": "12\u201318",
+    "lat": 28.65,
+    "lon": 84.1,
+    "season": "Mar\u2013Apr / Oct\u2013Nov"
+  },
+  {
+    "id": "overland",
+    "name": "Overland Track",
+    "region": "Tasmania",
+    "countries": "Australia",
+    "km": 65,
+    "days": "5\u20137",
+    "lat": -41.75,
+    "lon": 145.95,
+    "season": "Oct\u2013May"
+  },
+  {
+    "id": "lycian",
+    "name": "Lycian Way",
+    "region": "Mediterranean T\u00fcrkiye",
+    "countries": "T\u00fcrkiye",
+    "km": 540,
+    "days": "25\u201335",
+    "lat": 36.45,
+    "lon": 29.3,
+    "season": "Mar\u2013May / Sep\u2013Nov"
+  },
+  {
+    "id": "via-alpina",
+    "name": "Via Alpina \u2013 Green Trail",
+    "region": "Swiss Alps",
+    "countries": "Switzerland",
+    "km": 390,
+    "days": "15\u201320",
+    "lat": 46.65,
+    "lon": 8.2,
+    "season": "Jun\u2013Sep"
+  },
+  {
+    "id": "larapinta",
+    "name": "Larapinta Trail",
+    "region": "Northern Territory",
+    "countries": "Australia",
+    "km": 230,
+    "days": "12\u201316",
+    "lat": -23.7,
+    "lon": 133.3,
+    "season": "May\u2013Aug"
+  },
+  {
+    "id": "slovenian",
+    "name": "Slovenian Mountain Trail",
+    "region": "Slovenia",
+    "countries": "Slovenia",
+    "km": 617,
+    "days": "28\u201337",
+    "lat": 46.3,
+    "lon": 14.5,
+    "season": "Jun\u2013Sep"
+  },
+  {
+    "id": "shikoku",
+    "name": "Shikoku Pilgrimage",
+    "region": "Shikoku",
+    "countries": "Japan",
+    "km": 1200,
+    "days": "40\u201360",
+    "lat": 33.7,
+    "lon": 133.6,
+    "season": "Mar\u2013May / Oct\u2013Nov"
+  },
+  {
+    "id": "heaphy",
+    "name": "Heaphy Track",
+    "region": "South Island",
+    "countries": "New Zealand",
+    "km": 78,
+    "days": "4\u20136",
+    "lat": -41.0,
+    "lon": 172.2,
+    "season": "Year-round"
+  },
+  {
+    "id": "laugavegur",
+    "name": "Laugavegur Trail",
+    "region": "Iceland Highlands",
+    "countries": "Iceland",
+    "km": 55,
+    "days": "4\u20136",
+    "lat": 63.95,
+    "lon": -19.1,
+    "season": "Jun\u2013Sep"
+  }
+]
